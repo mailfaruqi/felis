@@ -1,0 +1,756 @@
+{
+  "generatedAt": "2026-08-14T18:35:41Z",
+  "fetchedAt": "2026-08-14T14:15:01Z",
+  "source": "GBIF Occurrence Store",
+  "genusTaxonKey": 2435022,
+  "count": 283773,
+  "countryCount": 219,
+  "fossilCount": 265,
+  "fossilSpecimenCount": 180,
+  "extinctSpeciesCount": 8,
+  "yearMin": 1574,
+  "yearMax": 2026,
+  "topCountries": [
+    {
+      "code": "AU",
+      "name": "Australia",
+      "count": 68697
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "count": 33499
+    },
+    {
+      "code": "US",
+      "name": "United States of America",
+      "count": 26548
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "count": 18698
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "count": 14774
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "count": 12968
+    }
+  ],
+  "fields": [
+    "lon",
+    "lat",
+    "s",
+    "year",
+    "key",
+    "precision",
+    "fossil"
+  ],
+  "precisionTiers": {
+    "0": "<= 1000 m",
+    "1": "1000-10000 m",
+    "2": "> 10000 m or unrecorded"
+  },
+  "species": [
+    {
+      "key": 2435035,
+      "scientificName": "Felis catus",
+      "authorship": "Linnaeus, 1758",
+      "vernacularName": "Domestic Cat",
+      "rank": "SPECIES",
+      "extinctPerGbif": false,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 214700,
+      "imageCount": 74070,
+      "fossilCount": 37,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "AU",
+          "name": "Australia",
+          "count": 68696
+        },
+        {
+          "code": "US",
+          "name": "United States of America",
+          "count": 26328
+        },
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "count": 18686
+        },
+        {
+          "code": "BE",
+          "name": "Belgium",
+          "count": 9901
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "count": 8960
+        },
+        {
+          "code": "NO",
+          "name": "Norway",
+          "count": 7941
+        }
+      ],
+      "yearMin": 1599,
+      "yearMax": 2026,
+      "extinct": false,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 7964291,
+      "scientificName": "Felis silvestris",
+      "authorship": "Schreber, 1777",
+      "vernacularName": "Wildcat",
+      "rank": "SPECIES",
+      "extinctPerGbif": false,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 64452,
+      "imageCount": 7679,
+      "fossilCount": 11,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "FR",
+          "name": "France",
+          "count": 29625
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "count": 7832
+        },
+        {
+          "code": "LU",
+          "name": "Luxembourg",
+          "count": 5945
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "count": 5812
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 3200
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom of Great Britain and Northern Ireland",
+          "count": 3117
+        }
+      ],
+      "yearMin": 1574,
+      "yearMax": 2026,
+      "extinct": false,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 2435066,
+      "scientificName": "Felis chaus",
+      "authorship": "Schreber, 1777",
+      "vernacularName": "Jungle Cat",
+      "rank": "SPECIES",
+      "extinctPerGbif": false,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 3499,
+      "imageCount": 563,
+      "fossilCount": 0,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "IL",
+          "name": "Israel",
+          "count": 2433
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "count": 520
+        },
+        {
+          "code": "NP",
+          "name": "Nepal",
+          "count": 312
+        },
+        {
+          "code": "IR",
+          "name": "Iran (Islamic Republic of)",
+          "count": 44
+        },
+        {
+          "code": "KH",
+          "name": "Cambodia",
+          "count": 42
+        },
+        {
+          "code": "LK",
+          "name": "Sri Lanka",
+          "count": 38
+        }
+      ],
+      "yearMin": 1905,
+      "yearMax": 2026,
+      "extinct": false,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": true
+    },
+    {
+      "key": 2435023,
+      "scientificName": "Felis manul",
+      "authorship": "Pallas, 1776",
+      "vernacularName": "Pallas' Cat",
+      "rank": "SPECIES",
+      "extinctPerGbif": false,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 708,
+      "imageCount": 402,
+      "fossilCount": 0,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "RU",
+          "name": "Russian Federation",
+          "count": 393
+        },
+        {
+          "code": "MN",
+          "name": "Mongolia",
+          "count": 100
+        },
+        {
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "count": 65
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 63
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "count": 32
+        },
+        {
+          "code": "NP",
+          "name": "Nepal",
+          "count": 16
+        }
+      ],
+      "yearMin": 1920,
+      "yearMax": 2026,
+      "extinct": false,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 8973485,
+      "scientificName": "Felis atrox",
+      "authorship": "Leidy, 1853",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": true,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 136,
+      "imageCount": 4,
+      "fossilCount": 136,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "US",
+          "name": "United States of America",
+          "count": 63
+        },
+        {
+          "code": "MX",
+          "name": "Mexico",
+          "count": 57
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "count": 14
+        },
+        {
+          "code": "PE",
+          "name": "Peru",
+          "count": 2
+        }
+      ],
+      "yearMin": 1937,
+      "yearMax": 2008,
+      "extinct": true,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 2435028,
+      "scientificName": "Felis margarita",
+      "authorship": "Loche, 1858",
+      "vernacularName": "Sand Cat",
+      "rank": "SPECIES",
+      "extinctPerGbif": false,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 88,
+      "imageCount": 27,
+      "fossilCount": 0,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "EH",
+          "name": "Western Sahara",
+          "count": 32
+        },
+        {
+          "code": "IL",
+          "name": "Israel",
+          "count": 15
+        },
+        {
+          "code": "US",
+          "name": "United States of America",
+          "count": 7
+        },
+        {
+          "code": "MA",
+          "name": "Morocco",
+          "count": 6
+        },
+        {
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "count": 5
+        },
+        {
+          "code": "KW",
+          "name": "Kuwait",
+          "count": 3
+        }
+      ],
+      "yearMin": 1967,
+      "yearMax": 2026,
+      "extinct": false,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 4969815,
+      "scientificName": "Felis rexroadensis",
+      "authorship": "(Stephens, 1959) ",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": null,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 61,
+      "imageCount": 0,
+      "fossilCount": 61,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "US",
+          "name": "United States of America",
+          "count": 61
+        }
+      ],
+      "yearMin": 1968,
+      "yearMax": 1993,
+      "extinct": true,
+      "extinctSource": "inferred from basisOfRecord",
+      "ambiguousName": false
+    },
+    {
+      "key": 2435037,
+      "scientificName": "Felis nigripes",
+      "authorship": "Burchell, 1824",
+      "vernacularName": "Black-footed Cat",
+      "rank": "SPECIES",
+      "extinctPerGbif": false,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 47,
+      "imageCount": 36,
+      "fossilCount": 1,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "ZA",
+          "name": "South Africa",
+          "count": 41
+        },
+        {
+          "code": "US",
+          "name": "United States of America",
+          "count": 2
+        },
+        {
+          "code": "NA",
+          "name": "Namibia",
+          "count": 2
+        },
+        {
+          "code": "BW",
+          "name": "Botswana",
+          "count": 2
+        }
+      ],
+      "yearMin": 1932,
+      "yearMax": 2026,
+      "extinct": false,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 9668525,
+      "scientificName": "Felis spec",
+      "authorship": "Linn\u00e6us, 1758",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": null,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 38,
+      "imageCount": 0,
+      "fossilCount": 0,
+      "unidentified": true,
+      "topCountries": [
+        {
+          "code": "ZA",
+          "name": "South Africa",
+          "count": 8
+        },
+        {
+          "code": "GR",
+          "name": "Greece",
+          "count": 3
+        },
+        {
+          "code": "HU",
+          "name": "Hungary",
+          "count": 3
+        },
+        {
+          "code": "US",
+          "name": "United States of America",
+          "count": 2
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "count": 2
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 2
+        }
+      ],
+      "yearMin": 1963,
+      "yearMax": 1963,
+      "extinct": false,
+      "extinctSource": "inferred from basisOfRecord",
+      "ambiguousName": false
+    },
+    {
+      "key": 2435040,
+      "scientificName": "Felis bieti",
+      "authorship": "Milne-Edwards, 1892",
+      "vernacularName": "Chinese Mountain Cat",
+      "rank": "SPECIES",
+      "extinctPerGbif": false,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 21,
+      "imageCount": 16,
+      "fossilCount": 0,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 21
+        }
+      ],
+      "yearMin": 1921,
+      "yearMax": 2026,
+      "extinct": false,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 9283073,
+      "scientificName": "Felis studeri",
+      "authorship": "(Savage, 1960) ",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": true,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 9,
+      "imageCount": 0,
+      "fossilCount": 9,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "US",
+          "name": "United States of America",
+          "count": 7
+        },
+        {
+          "code": "MX",
+          "name": "Mexico",
+          "count": 2
+        }
+      ],
+      "yearMin": null,
+      "yearMax": null,
+      "extinct": true,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 8606308,
+      "scientificName": "Felis obscura",
+      "authorship": "Hendey, 1974",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": true,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 3,
+      "imageCount": 0,
+      "fossilCount": 3,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "ZA",
+          "name": "South Africa",
+          "count": 3
+        }
+      ],
+      "yearMin": null,
+      "yearMax": null,
+      "extinct": true,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 9309947,
+      "scientificName": "Felis prisca",
+      "authorship": "Kaup, 1833",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": true,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 2,
+      "imageCount": 1,
+      "fossilCount": 2,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 1
+        },
+        {
+          "code": "TR",
+          "name": "T\u00fcrkiye",
+          "count": 1
+        }
+      ],
+      "yearMin": null,
+      "yearMax": null,
+      "extinct": true,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 9458119,
+      "scientificName": "Felis aphanista",
+      "authorship": "Kaup, 1833",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": true,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 2,
+      "imageCount": 2,
+      "fossilCount": 2,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 2
+        }
+      ],
+      "yearMin": null,
+      "yearMax": null,
+      "extinct": true,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 8467241,
+      "scientificName": "Felis platensis",
+      "authorship": "Ameghino, 1889",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": true,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 2,
+      "imageCount": 0,
+      "fossilCount": 2,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "BO",
+          "name": "Bolivia (Plurinational State of)",
+          "count": 1
+        },
+        {
+          "code": "EC",
+          "name": "Ecuador",
+          "count": 1
+        }
+      ],
+      "yearMin": null,
+      "yearMax": null,
+      "extinct": true,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 8498092,
+      "scientificName": "Felis maxima",
+      "authorship": "Scott & Osborn, 1890",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": true,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 1,
+      "imageCount": 0,
+      "fossilCount": 1,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "US",
+          "name": "United States of America",
+          "count": 1
+        }
+      ],
+      "yearMin": null,
+      "yearMax": null,
+      "extinct": true,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    },
+    {
+      "key": 4969817,
+      "scientificName": "Felis youngi",
+      "authorship": "Pei",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": null,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 1,
+      "imageCount": 0,
+      "fossilCount": 0,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 1
+        }
+      ],
+      "yearMin": null,
+      "yearMax": null,
+      "extinct": false,
+      "extinctSource": "inferred from basisOfRecord",
+      "ambiguousName": false
+    },
+    {
+      "key": 9011947,
+      "scientificName": "Felis chaus",
+      "authorship": "Guldenstaedt, 1776",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": null,
+      "taxonomicStatus": "DOUBTFUL",
+      "count": 1,
+      "imageCount": 0,
+      "fossilCount": 0,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "UA",
+          "name": "Ukraine",
+          "count": 1
+        }
+      ],
+      "yearMin": 1975,
+      "yearMax": 1975,
+      "extinct": false,
+      "extinctSource": "inferred from basisOfRecord",
+      "ambiguousName": true
+    },
+    {
+      "key": 9029391,
+      "scientificName": "Felis cafra",
+      "authorship": "Desmarest, 1822",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": null,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 1,
+      "imageCount": 0,
+      "fossilCount": 0,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "ZA",
+          "name": "South Africa",
+          "count": 1
+        }
+      ],
+      "yearMin": null,
+      "yearMax": null,
+      "extinct": false,
+      "extinctSource": "inferred from basisOfRecord",
+      "ambiguousName": false
+    },
+    {
+      "key": 8450224,
+      "scientificName": "Felis ocreata",
+      "authorship": "Gmelin, 1791",
+      "vernacularName": null,
+      "rank": "SPECIES",
+      "extinctPerGbif": false,
+      "taxonomicStatus": "ACCEPTED",
+      "count": 1,
+      "imageCount": 0,
+      "fossilCount": 0,
+      "unidentified": false,
+      "topCountries": [
+        {
+          "code": "TZ",
+          "name": "Tanzania, United Republic of",
+          "count": 1
+        }
+      ],
+      "yearMin": 1903,
+      "yearMax": 1903,
+      "extinct": false,
+      "extinctSource": "GBIF species profile",
+      "ambiguousName": false
+    }
+  ]
+}

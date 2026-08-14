@@ -258,14 +258,44 @@ data/                            raw + processed (gitignored)
 public/data/                     what the app serves (gitignored)
 ```
 
-## Build
+## Build and deploy
 
 ```bash
 bun run build
 ```
 
-Outputs to `dist/`. `public/data/` must be generated before building, since the
-JSON files are served as static assets. Any static host works.
+Outputs a fully static `dist/`. Any static host works: Cloudflare Pages, Netlify,
+Vercel, GitHub Pages. Build command `bun run build`, output directory `dist`, and
+one environment variable, `VITE_MAPBOX_TOKEN`.
+
+`public/data/` is committed, so a clone builds and deploys without running the
+hour-long fetch. Refresh it when you want newer data:
+
+```bash
+bun run data:all
+```
+
+### What the deployed site requests
+
+| Action | Network |
+| --- | --- |
+| First load | `occurrences.json`, 11 MB raw and about 2.8 MB gzipped by the host |
+| Pan, zoom, filter by species | nothing, it is all client side |
+| Click one sighting | one call to `api.gbif.org` for that record |
+
+There is no per-view API traffic and no database. A hosted database would ship
+the same bytes through an extra dependency, so it is only worth adding if the
+product later needs accounts or server-side spatial queries.
+
+### Before making the repository public
+
+`.env` is gitignored, so the token is not in git. But `VITE_*` variables are
+compiled into the browser bundle, which is unavoidable for Mapbox GL: the token
+has to reach the client. **Restrict the token to your deployed domains** under
+URL restrictions at
+[account.mapbox.com/access-tokens](https://account.mapbox.com/access-tokens/),
+otherwise anyone can copy it from the bundle and spend your quota. Use a separate
+token for production and keep the unrestricted one for localhost.
 
 ## Data attribution
 
