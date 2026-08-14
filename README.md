@@ -232,6 +232,12 @@ interface labels. Tokens live at the top of `src/index.css`.
 Species are listed by common name, with the scientific name beneath, because a
 latin binomial tells a general reader nothing.
 
+Selecting a species opens a summary panel: total sightings, the year span, and
+the six countries with the most records, each with its flag. `build.py` tallies
+those per species, so they come from the dataset rather than a lookup table. The
+panel also carries the precision legend, since paw colour is otherwise
+unexplained: pale means located to within 1 km, orange means vaguer.
+
 ## Project structure
 
 ```

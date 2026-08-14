@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { MapView } from './components/map/MapView'
 import { SpeciesRail } from './components/species/SpeciesRail'
+import { SpeciesSummary } from './components/species/SpeciesSummary'
 import { OccurrenceCard } from './components/occurrence/OccurrenceCard'
 import { loadDataset, loadPoints, formatDatasetDate } from './lib/data'
 import type { Dataset, PackedPoint } from './types'
@@ -34,6 +35,32 @@ export default function App() {
     () => dataset?.species.map((s) => s.vernacularName ?? s.scientificName) ?? [],
     [dataset],
   )
+
+  // Totals track the fossil toggle so they always match what the map draws.
+  // Country tallies stay whole-record, since they answer "where has this been
+  // recorded" rather than "what is on screen".
+  const summary = useMemo(() => {
+    if (!dataset) return null
+    if (speciesIndex === null) {
+      return {
+        title: 'Every cat',
+        subtitle: `${dataset.species.length} species in the genus Felis`,
+        total: showFossils ? dataset.count : dataset.count - dataset.fossilCount,
+        countries: dataset.topCountries,
+        yearMin: dataset.yearMin,
+        yearMax: dataset.yearMax,
+      }
+    }
+    const s = dataset.species[speciesIndex]
+    return {
+      title: s.vernacularName ?? s.scientificName,
+      subtitle: s.vernacularName ? s.scientificName : s.authorship || null,
+      total: showFossils ? s.count : s.count - s.fossilCount,
+      countries: s.topCountries,
+      yearMin: s.yearMin,
+      yearMax: s.yearMax,
+    }
+  }, [dataset, speciesIndex, showFossils])
 
   // An extinct species selected while palaeontological records are hidden shows
   // an empty map, which reads as a bug unless we say why.
@@ -119,6 +146,17 @@ export default function App() {
               ? 'This cat is extinct. Switch on “Show ancient cats” to see where its fossils were found.'
               : 'No sightings match this choice.'}
           </div>
+        )}
+
+        {dataset && summary && (
+          <SpeciesSummary
+            title={summary.title}
+            subtitle={summary.subtitle}
+            total={summary.total}
+            countries={summary.countries}
+            yearMin={summary.yearMin}
+            yearMax={summary.yearMax}
+          />
         )}
 
         {dataset && (

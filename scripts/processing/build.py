@@ -98,6 +98,9 @@ def main():
     species_images = Counter()
     species_fossils = Counter()
     countries = set()
+    country_names = {}
+    species_countries = {}
+    species_years = {}
     fossil_count = 0
     years = []
     seen_keys = set()
@@ -155,11 +158,16 @@ def main():
                 species_fossils[skey] += 1
             if r.get("hasImage"):
                 species_images[skey] += 1
-            if r.get("countryCode"):
-                countries.add(r["countryCode"])
+            code = r.get("countryCode")
+            if code:
+                countries.add(code)
+                country_names.setdefault(code, r.get("country") or code)
+                species_countries.setdefault(skey, Counter())[code] += 1
             year = r.get("year") or 0
             if year:
                 years.append(year)
+                span = species_years.setdefault(skey, [year, year])
+                span[0], span[1] = min(span[0], year), max(span[1], year)
 
             kept.append([
                 round(lon, 5),
@@ -181,6 +189,12 @@ def main():
         meta["imageCount"] = species_images[key]
         meta["fossilCount"] = species_fossils[key]
         meta["unidentified"] = key == UNIDENTIFIED_KEY
+        meta["topCountries"] = [
+            {"code": c, "name": country_names.get(c, c), "count": n}
+            for c, n in species_countries.get(key, Counter()).most_common(6)
+        ]
+        span = species_years.get(key)
+        meta["yearMin"], meta["yearMax"] = (span[0], span[1]) if span else (None, None)
 
         # no profile: fall back to the record mix
         if meta["extinctPerGbif"] is None:
@@ -207,6 +221,10 @@ def main():
         if row[2] in extinct_indices:
             row[6] = 1
 
+    overall_countries = Counter()
+    for tally in species_countries.values():
+        overall_countries.update(tally)
+
     palaeo_total = sum(1 for row in kept if row[6] == 1)
     for s in species:
         s["fossilCount"] = s["count"] if s["extinct"] else s["fossilCount"]
@@ -229,6 +247,10 @@ def main():
         "yearMin": min(years) if years else None,
         "yearMax": max(years) if years else None,
         # [lon, lat, speciesIndex, year(0=unknown), gbifKey, precision, isFossil]
+        "topCountries": [
+            {"code": c, "name": country_names.get(c, c), "count": n}
+            for c, n in overall_countries.most_common(6)
+        ],
         "fields": ["lon", "lat", "s", "year", "key", "precision", "fossil"],
         "precisionTiers": {
             "0": f"<= {PRECISE_MAX} m",

@@ -1,3 +1,9 @@
+export type CountryTally = {
+  code: string
+  name: string
+  count: number
+}
+
 export type Species = {
   key: number
   scientificName: string
@@ -12,6 +18,9 @@ export type Species = {
   extinctSource: string
   ambiguousName: boolean
   unidentified: boolean
+  topCountries: CountryTally[]
+  yearMin: number | null
+  yearMax: number | null
 }
 
 export type Dataset = {
@@ -26,6 +35,7 @@ export type Dataset = {
   extinctSpeciesCount: number
   yearMin: number | null
   yearMax: number | null
+  topCountries: CountryTally[]
   fields: string[]
   precisionTiers: Record<string, string>
   species: Species[]
