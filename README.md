@@ -270,13 +270,21 @@ Outputs a fully static `dist/`. Any static host works. Build command
 
 ### GitHub Pages
 
-`.github/workflows/deploy.yml` builds and publishes on every push to `main`. The
-workflow turns Pages on itself via `enablement: true`, so the only manual step is
-the token:
+`.github/workflows/deploy.yml` builds and publishes on every push to `main`. Two
+one-time steps, both of which need admin rights the workflow token does not have:
 
 ```bash
 gh secret set VITE_MAPBOX_TOKEN --repo <user>/felis
 ```
+
+```bash
+gh api --method POST repos/<user>/felis/pages -f build_type=workflow
+```
+
+The second enables Pages with Actions as the source, equivalent to setting
+Settings > Pages > Source to GitHub Actions. Until it exists, `configure-pages`
+fails with a 404, and `enablement: true` does not help because creating a Pages
+site is not something `GITHUB_TOKEN` is allowed to do.
 
 The site then serves at `https://<user>.github.io/felis/`. The first run can take
 a couple of minutes to become reachable after it reports success.

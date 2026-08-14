@@ -39,11 +39,9 @@ jobs:
         # Without it, Pages runs Jekyll and drops files beginning with an underscore.
         run: touch dist/.nojekyll
 
+      # Pages must already exist: creating it needs admin rights that the
+      # workflow token does not have, so enablement: true fails here.
       - uses: actions/configure-pages@v5
-        with:
-          # Turns Pages on and sets the source to Actions, so the repository
-          # needs no manual setup before the first deploy.
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
