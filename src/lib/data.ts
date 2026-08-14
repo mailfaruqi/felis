@@ -1,13 +1,17 @@
 import type { Dataset, PackedPoint } from '../types'
 
+// BASE_URL is "/" locally and "/felis/" on GitHub Pages, so data paths must
+// carry it rather than starting from the domain root.
+const DATA = `${import.meta.env.BASE_URL}data/`
+
 export async function loadDataset(): Promise<Dataset> {
-  const res = await fetch('/data/species.json')
+  const res = await fetch(`${DATA}species.json`)
   if (!res.ok) throw new Error('Could not load the species index.')
   return res.json()
 }
 
 export async function loadPoints(): Promise<PackedPoint[]> {
-  const res = await fetch('/data/occurrences.json')
+  const res = await fetch(`${DATA}occurrences.json`)
   if (!res.ok) throw new Error('Could not load the occurrence data.')
   const body = await res.json()
   return body.points

@@ -264,9 +264,26 @@ public/data/                     what the app serves (gitignored)
 bun run build
 ```
 
-Outputs a fully static `dist/`. Any static host works: Cloudflare Pages, Netlify,
-Vercel, GitHub Pages. Build command `bun run build`, output directory `dist`, and
-one environment variable, `VITE_MAPBOX_TOKEN`.
+Outputs a fully static `dist/`. Any static host works. Build command
+`bun run build`, output directory `dist`, one environment variable
+`VITE_MAPBOX_TOKEN`.
+
+### GitHub Pages
+
+`.github/workflows/deploy.yml` builds and publishes on every push to `main`.
+Two one-time settings are needed:
+
+1. **Settings > Secrets and variables > Actions**, add a repository secret
+   `VITE_MAPBOX_TOKEN`.
+2. **Settings > Pages**, set Source to **GitHub Actions**.
+
+The site then serves at `https://<user>.github.io/felis/`.
+
+A project site lives under `/<repo>/`, so asset and data URLs need that prefix.
+`vite.config.ts` reads `VITE_BASE` (the workflow sets it from the repo name) and
+`src/lib/data.ts` builds data URLs from `import.meta.env.BASE_URL`. Without both,
+the page loads blank and the JSON 404s. For a user site, in a repo named
+`<user>.github.io`, set `VITE_BASE` to `/` instead.
 
 `public/data/` is committed, so a clone builds and deploys without running the
 hour-long fetch. Refresh it when you want newer data:
