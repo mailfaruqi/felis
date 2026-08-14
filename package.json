@@ -1,0 +1,28 @@
+{
+  "name": "felis",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "data:fetch": "python3 scripts/gbif/fetch.py",
+    "data:process": "python3 scripts/processing/build.py",
+    "data:all": "bun run data:fetch && bun run data:process"
+  },
+  "dependencies": {
+    "mapbox-gl": "^3.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.16",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}
