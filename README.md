@@ -270,14 +270,16 @@ Outputs a fully static `dist/`. Any static host works. Build command
 
 ### GitHub Pages
 
-`.github/workflows/deploy.yml` builds and publishes on every push to `main`.
-Two one-time settings are needed:
+`.github/workflows/deploy.yml` builds and publishes on every push to `main`. The
+workflow turns Pages on itself via `enablement: true`, so the only manual step is
+the token:
 
-1. **Settings > Secrets and variables > Actions**, add a repository secret
-   `VITE_MAPBOX_TOKEN`.
-2. **Settings > Pages**, set Source to **GitHub Actions**.
+```bash
+gh secret set VITE_MAPBOX_TOKEN --repo <user>/felis
+```
 
-The site then serves at `https://<user>.github.io/felis/`.
+The site then serves at `https://<user>.github.io/felis/`. The first run can take
+a couple of minutes to become reachable after it reports success.
 
 A project site lives under `/<repo>/`, so asset and data URLs need that prefix.
 `vite.config.ts` reads `VITE_BASE` (the workflow sets it from the repo name) and
